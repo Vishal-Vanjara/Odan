@@ -47,7 +47,6 @@ class MyApp extends StatelessWidget {
                             width: 200,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              // color: Colors.green,
                               image: DecorationImage(
                                 image: AssetImage("asset/home1.jpeg"),
                                 fit: BoxFit.cover,
