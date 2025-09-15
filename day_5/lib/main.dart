@@ -1,4 +1,4 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               // here try Expanded Widget
               Row(
                 children: [
-                  Expanded(
+                  Expanded(             // Used to fill the available space
                     flex: 3,
                     child: Container(
                       height: 120,
@@ -158,12 +158,193 @@ class MyApp extends StatelessWidget {
                     child: Text("Circle Avatar",style: TextStyle(color: Colors.white),),
                   ),
                 ),
+              ),
+
+
+              //day 6 work Start from here----->
+
+
+              // Work on Richtext Widget
+              RichText(
+                  text: TextSpan(
+                    style: (
+                    TextStyle(
+                      color: Colors.black54,
+                      fontSize: 18,
+                    )
+                    ),
+                    children: [
+                      TextSpan(text: 'Hello this is a '),
+                      TextSpan(text: "Richtext Widget" ,style: TextStyle(fontSize: 26,color: Colors.orange,fontWeight: FontWeight.bold )),
+                    ],
+                  ),
+              ),
+
+              SizedBox(height: 20,),
+
+              // Work on Stack Widget in that used positioned Widget
+              Container(
+                height: 300,
+                width: 300,
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.greenAccent,
+                    ),
+                    Positioned(
+                      top: 20,
+                      left: 20,
+                      child: Container(
+                        height: 200,
+                        width: 200,
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                    Positioned(
+                      top:40,
+                      left: 40,
+                      child: Container(
+                        height: 200,
+                        width: 200,
+                        color: Colors.greenAccent,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              //Work on wrap Widget
+              Wrap(
+                direction: Axis.horizontal,
+                spacing: 20,
+                runSpacing: 20,
+                // alignment: WrapAlignment.spaceAround,
+                children:[
+                  Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.red,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.blueGrey,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.yellow,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.orangeAccent,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.purpleAccent,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.pinkAccent,
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  color: Colors.purple,
+                ),
+                ],
+              ),
+
+              SizedBox(height: 20,),
+
+              // Work on Textfield Widget
+              Container(
+                height: 200,
+                  width: 300,
+                  child: Column(
+                    children: [
+                      TextField(
+                        // enabled: false,
+                        decoration: InputDecoration(
+                          hintText: "Password",
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.blue,
+                                width: 3,
+                              ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(
+                              color: Colors.red,
+                            )
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                color: Colors.grey,
+                              )
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            // borderSide: BorderSide(
+                            //   color: Colors.blue
+                            // ),
+                          ),
+                          // suffixText: "Invalid password!!",
+                          suffixIcon: IconButton(icon: Icon(Icons.remove_red_eye),
+                          onPressed: () {},),
+                          prefixIcon: Icon(Icons.verified_user),
+                        ),
+                        obscureText: true,
+                      ),
+
+                      SizedBox(height: 20,),
+
+                      TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20)
+                            )
+                        ),
+                      ),
+                    ],
+                  ),
               )
 
             ],
           ),
 
         ),
+
+        // floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          onPressed: (){},
+        ),
+
+        // bottomNavigationBar: BottomNavigationBar(
+        //   // type: BottomNavigationBarType.fixed,
+        //   currentIndex: 2,
+        //   items: [
+        //     BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        //     BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Setting'),
+        //     BottomNavigationBarItem(icon: Icon(Icons.person), label: 'User')
+        //   ],
+        // ),
       ),
     );
   }
