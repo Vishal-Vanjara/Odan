@@ -1,6 +1,8 @@
-import 'package:day_16/notepage.dart';
+
+import 'package:day_16/Demo_2/hive_db.dart';
+import 'package:day_16/Demo_3/ui_page.dart';
 import 'package:flutter/material.dart';
-import 'db_helper.dart'; // <-- your helper class file
+// <-- your helper class file
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sqflite Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: NotesPage(),
+      home: UiPage(),
     );
   }
 }
